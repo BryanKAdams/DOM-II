@@ -87,7 +87,6 @@ stopLink.addEventListener("click", (event) => {
 const divPress = document.querySelectorAll(".destination");
 divPress.forEach(x => x.addEventListener("click", event => {
     console.log("div has been pressed");
-    event.stopPropagation();
 }))
 const buttonpress = document.querySelectorAll(".btn");
 buttonpress.forEach(x => x.addEventListener("click", event => {
