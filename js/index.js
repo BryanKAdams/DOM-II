@@ -70,13 +70,13 @@ password.addEventListener('blur', (event) => {
     event.target.style.background = 'pink';
 });
 
+
 password.addEventListener('focus', (event) => {
     event.target.style.background = '';
 });
 const containerPar = document.querySelectorAll("nav a");
 window.addEventListener("load", (event) => {
     containerPar.forEach(x => x.style.backgroundColor = "yellow");
-    containerPar.forEach(x => x.style.boxShadow = "0 0 20px 20px yellow");
 })
 const stopLink = document.querySelector("nav");
 
@@ -84,3 +84,13 @@ stopLink.addEventListener("click", (event) => {
   console.log("stopped the link");
   event.preventDefault();
 })
+const divPress = document.querySelectorAll(".destination");
+divPress.forEach(x => x.addEventListener("click", event => {
+    console.log("div has been pressed");
+    event.stopPropagation();
+}))
+const buttonpress = document.querySelectorAll(".btn");
+buttonpress.forEach(x => x.addEventListener("click", event => {
+    console.log("button has been pressed");
+    event.stopPropagation();
+}))
